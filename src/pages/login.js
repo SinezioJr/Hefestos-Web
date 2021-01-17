@@ -7,6 +7,8 @@ import { Input, Button } from "../styles/forms";
 import Masks from "../controllers/Mask";
 import { useForm } from "react-hook-form";
 
+import { useHistory } from "react-router-dom";
+
 const BackGround = styled.div`
   background-image: url(${bg});
   background-color: #ffeb3b;
@@ -91,9 +93,14 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
+  const history = useHistory();
+
   const { register, handleSubmit, errors, setValue } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    history.push("/jobs");
+  };
 
   return (
     <>
