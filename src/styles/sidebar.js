@@ -3,6 +3,10 @@ import styled from "styled-components";
 import Persona from "../assets/images/persona.png";
 
 import Vacancies from "../assets/icons/vacancies";
+import Person from "../assets/icons/person";
+import Cog from "../assets/icons/cog";
+import Power from "../assets/icons/power";
+import Desklamp from "../assets/icons/desklamp";
 
 const VerticalBar = styled.div`
   position: fixed;
@@ -38,10 +42,10 @@ const VerticalBar = styled.div`
       float: left;
     }
     .label {
-      display: ${(props) => (props.active ? "block" : "none")};
       height: ${(props) => (props.active ? "90px" : "50px")};
       padding: ${(props) => (props.active ? "10px" : "5px")};
       box-sizing: border-box;
+      white-space: nowrap;
 
       font-family: Rubik;
       font-style: normal;
@@ -59,6 +63,8 @@ const VerticalBar = styled.div`
         line-height: 24px;
       }
       .id {
+        display: ${(props) => (props.active ? "block" : "none")};
+
         font-weight: 300;
         font-size: 14px;
         line-height: 24px;
@@ -70,12 +76,19 @@ const VerticalBar = styled.div`
 
   .divider {
     width: 216px;
-    margin: 10px 17px;
+    margin: 10px 17px 5px;
     border-bottom: 1px solid #e5e5e5;
     display: ${(props) => (props.active ? "block" : "none")};
   }
 
   .menu {
+    display: flex;
+    flex-direction: column;
+    height: ${(props) =>
+      props.active ? "calc(100vh - 106px)" : "calc(100vh - 50px)"};
+    .align-end {
+      margin-bottom: auto;
+    }
     .item {
       display: inline;
       white-space: nowrap;
@@ -87,21 +100,34 @@ const VerticalBar = styled.div`
         }
       }
     }
+    .active {
+      background: #ffeb3b;
+      :hover {
+        .headline {
+          background: #000;
+          color: #ffeb3b;
+        }
+        path {
+          fill: #ffeb3b;
+        }
+      }
+    }
 
     .icon {
-      width: ${(props) => (props.active ? "30px" : "24px")};
-      height: ${(props) => (props.active ? "30px" : "24px")};
-      margin: ${(props) => (props.active ? "5px 10px" : "13px")};
+      width: ${(props) => (props.active ? "26px" : "24px")};
+      height: ${(props) => (props.active ? "26px" : "24px")};
+      margin: ${(props) => (props.active ? "9px 20px" : "10px 13px")};
       float: left;
     }
 
     .headline {
-      font-family: Roboto;
+      font-family: Rubick, "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
       font-style: normal;
       font-weight: 400;
-      font-size: 18px;
-      line-height: 40px;
-      letter-spacing: 0.15px;
+      font-size: 16px;
+      line-height: 45px;
+      letter-spacing: 0.3px;
 
       color: #000000;
     }
@@ -124,9 +150,31 @@ export default function SideBar(props) {
         <div className="divider"></div>
 
         <div className="menu">
+          <div className="align-end">
+            <div className="item">
+              <Desklamp className="icon" />
+              <div className="headline">Cursos</div>
+            </div>
+
+            <div className="item">
+              <Vacancies className="icon" />
+              <div className="headline">Vagas</div>
+            </div>
+
+            <div className="item">
+              <Person className="icon" />
+              <div className="headline">Perfil</div>
+            </div>
+          </div>
+
           <div className="item">
-            <Vacancies className="icon" />
-            <div className="headline">Vagas</div>
+            <Cog className="icon" />
+            <div className="headline">Configurações</div>
+          </div>
+
+          <div className="item active">
+            <Power className="icon" />
+            <div className="headline">Sair</div>
           </div>
         </div>
       </VerticalBar>

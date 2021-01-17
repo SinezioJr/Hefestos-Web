@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const InputEfect = styled.div`
+export const InputEfect = styled.div`
   position: relative;
   text-align: left;
   margin: 20px 10px;
@@ -52,12 +52,46 @@ const InputEfect = styled.div`
   }
 `;
 
-export default function App() {
-  return (
-    <InputEfect>
-      <input type="text" placeholder="" />
-      <label>label</label>
-      <span className="focus-border"></span>
-    </InputEfect>
-  );
-}
+export const Container = styled.div`
+  width: 100%;
+  max-width: 1050px;
+  margin: 10px auto;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  padding: 10px 20px;
+`;
+
+export const ButtonCard = styled.button`
+  border: 1px solid #e5e5e5;
+  background: ${(props) =>
+    props.color ? props.color : "rgba(200, 185, 0, 1)"};
+  border-radius: 20px;
+  width: 250px;
+  padding: 5px 0px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+
+  letter-spacing: 0.15px;
+
+  color: #ffffff;
+  cursor: pointer;
+`;
+
+export const FloatButton = styled.button`
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  border: 1px solid #e5e5e5;
+  background: "#0086C3";
+  border-radius: 20px;
+  width: 50px;
+  height: 50px;
+
+  color: #ffffff;
+  cursor: pointer;
+`;

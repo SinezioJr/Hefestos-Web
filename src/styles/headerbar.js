@@ -2,8 +2,13 @@ import styled from "styled-components";
 
 import Menu from "../assets/icons/menu";
 import Notification from "../assets/icons/notification";
+import NotificationZone from "./notifications";
 
 const HeaderBar = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
   height: 45px;
   width: 100%;
   box-sizing: border-box;
@@ -23,6 +28,18 @@ const HeaderBar = styled.div`
   .menu {
     cursor: pointer;
   }
+  .title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+    /* identical to box height, or 100% */
+    letter-spacing: 0.15px;
+
+    color: #000000;
+  }
   .notification {
     float: right;
     cursor: pointer;
@@ -39,7 +56,10 @@ function App(props) {
           className="menu"
           onClick={props.changeBarActive}
         />
-        <Notification width="25" height="25" className="notification" />
+        <div className="title">CURSOS</div>
+        <NotificationZone className="notification">
+          <Notification width="25" height="25" />
+        </NotificationZone>
       </HeaderBar>
     </>
   );

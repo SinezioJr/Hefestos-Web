@@ -2,7 +2,7 @@ import styled, { createGlobalStyle } from "styled-components";
 
 import bg from "../assets/images/bg.svg";
 import Logo from "../assets/images/logo.svg";
-import Input from "../styles/forms";
+import { InputEfect } from "../styles/forms";
 
 const BackGround = styled.div`
   background-image: url(${bg});
@@ -51,7 +51,7 @@ function App() {
       <BackGround>
         <Cards>
           <img src={Logo} alt="Logo" />
-          <Input></Input>
+          <InputEfect></InputEfect>
         </Cards>
       </BackGround>
     </>

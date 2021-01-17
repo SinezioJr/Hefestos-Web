@@ -1,14 +1,23 @@
 export default function icon(props) {
   return (
     <svg
+      width="15"
+      height="15"
+      viewBox="0 0 15 15"
+      fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      height="24"
-      viewBox="0 0 24 24"
-      width="24"
       {...props}
     >
-      <path d="M0 0h24v24H0z" fill="none" />
-      <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M5 2.5V3H1.5C0.671573 3 0 3.67157 0 4.5V11H15V4.5C15 3.67157 14.3284 3 13.5 3H10V2.5C10 1.11929 8.88071 0 7.5 0C6.11929 0 5 1.11929 5 2.5ZM7.5 1C6.67157 1 6 1.67157 6 2.5V3H9V2.5C9 1.67157 8.32843 1 7.5 1Z"
+        fill="black"
+      />
+      <path
+        d="M15 12H0V13.5C0 14.3284 0.671573 15 1.5 15H13.5C14.3284 15 15 14.3284 15 13.5V12Z"
+        fill="black"
+      />
     </svg>
   );
 }
