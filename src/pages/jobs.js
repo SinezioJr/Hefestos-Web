@@ -5,14 +5,14 @@ import { Container, FloatButton } from "../styles/forms";
 import { CardJobs } from "../components/cards";
 
 import Add from "../assets/icons/sum";
-import AddCourseModal from "../components/ModalCourse";
+import AddJobsModal from "../components/ModalJobs";
 
 function App() {
   //Modais:
-  const [addCourse, setAddCourse] = useState(false);
+  const [addJobs, setAddJobs] = useState(false);
 
-  const showManualCourse = () => setAddCourse(true);
-  const closeManualCourse = () => setAddCourse(false);
+  const showManualJobs = () => setAddJobs(true);
+  const closeManualJobs = () => setAddJobs(false);
 
   return (
     <>
@@ -23,11 +23,11 @@ function App() {
           <CardJobs />
           <CardJobs />
         </Container>
-        <FloatButton onClick={showManualCourse}>
+        <FloatButton onClick={showManualJobs}>
           <Add />
         </FloatButton>
       </Frame>
-      <AddCourseModal show={addCourse} handleClose={closeManualCourse} />
+      <AddJobsModal show={addJobs} handleClose={closeManualJobs} />
     </>
   );
 }

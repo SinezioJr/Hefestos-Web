@@ -9,7 +9,7 @@ export default function RouterView() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact component={jobs} />
+        <Route path="/" exact component={login} />
         <Route path="/jobs" component={jobs} />
         <Route path="/courses" component={courses} />
       </Switch>

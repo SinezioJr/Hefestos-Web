@@ -132,6 +132,30 @@ export const LongButton = styled.button`
   cursor: pointer;
 `;
 
+export const Button = styled.button`
+  margin: 24px 0px;
+  border: 1px solid #e5e5e5;
+  background: #0086c3;
+  border-radius: 4px;
+  width: 100%;
+  padding: 15px 0px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+
+  /* identical to box height, or 114% */
+  text-align: center;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+
+  /* 03. On Primary / High Emphasis */
+  color: #ffffff;
+  cursor: pointer;
+`;
+
 export const Input = styled.div`
   width: 100%;
   text-align: left;
