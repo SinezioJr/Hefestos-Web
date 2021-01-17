@@ -1,11 +1,28 @@
 import Modal from "../styles/modais";
+import styled from "styled-components";
 
 import { useForm } from "react-hook-form";
 
 import { Input, Row, Select, LongButton } from "../styles/forms";
 
-export default (props) => {
-  const { register, handleSubmit, errors } = useForm({
+const Title = styled.div`
+  width: 100%;
+  text-align: center;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  /* identical to box height, or 100% */
+  letter-spacing: 0.15px;
+
+  color: #000000;
+`;
+
+export default function App(props) {
+  const { register, handleSubmit } = useForm({
     defaultValues: { tipo: "" },
   });
 
@@ -14,6 +31,7 @@ export default (props) => {
   return (
     <>
       <Modal {...props}>
+        <Title>Cadastrar Cursos</Title>
         <form onSubmit={handleSubmit(onSubmit)}>
           <Input>
             <label htmlFor="titulodaVaga">Título da Vaga</label>
@@ -111,4 +129,4 @@ export default (props) => {
       </Modal>
     </>
   );
-};
+}

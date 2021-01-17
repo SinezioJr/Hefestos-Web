@@ -112,6 +112,7 @@ export const FloatButton = styled.button`
 `;
 
 export const LongButton = styled.button`
+  margin: 10px 0px;
   border: 1px solid #e5e5e5;
   background: #0086c3;
   border-radius: 5px;
