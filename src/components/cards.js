@@ -1,4 +1,4 @@
-import { CourseCard } from "../styles/card";
+import { CourseCard, JobsCard } from "../styles/card";
 import { ButtonCard } from "../styles/forms";
 
 export const CardCourse = () => (
@@ -22,4 +22,28 @@ export const CardCourse = () => (
       </div>
     </div>
   </CourseCard>
+);
+
+export const CardJobs = () => (
+  <JobsCard>
+    <div className="header">
+      <div className="title">Operador de Caixa</div>
+      <div className="tipe">Emprego</div>
+    </div>
+
+    <div className="informations">
+      <div className="local">
+        Rua Landoufo Alves, 26, Santo Antonio de Jesus - BA
+      </div>
+      <div className="obs">
+        Body 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+        minim veniam
+      </div>
+      <div className="buttons">
+        <ButtonCard>EDITAR VAGA</ButtonCard>
+        <ButtonCard color="#0086C3">VER VAGA</ButtonCard>
+      </div>
+    </div>
+  </JobsCard>
 );

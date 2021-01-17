@@ -59,6 +59,17 @@ export const Container = styled.div`
   border: 1px solid #e5e5e5;
   border-radius: 5px;
   padding: 10px 20px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  /* identical to box height, or 120% */
+  letter-spacing: 0.15px;
+
+  color: #5b5a5a;
 `;
 
 export const ButtonCard = styled.button`
@@ -66,7 +77,7 @@ export const ButtonCard = styled.button`
   background: ${(props) =>
     props.color ? props.color : "rgba(200, 185, 0, 1)"};
   border-radius: 20px;
-  width: 250px;
+  width: 330px;
   padding: 5px 0px;
 
   font-family: Roboto;
@@ -87,11 +98,194 @@ export const FloatButton = styled.button`
   right: 20px;
 
   border: 1px solid #e5e5e5;
-  background: "#0086C3";
-  border-radius: 20px;
-  width: 50px;
-  height: 50px;
+  background: #0086c3;
+  border-radius: 30px;
+  width: 60px;
+  height: 60px;
 
   color: #ffffff;
   cursor: pointer;
+
+  path {
+    fill: #ffffff;
+  }
+`;
+
+export const LongButton = styled.button`
+  border: 1px solid #e5e5e5;
+  background: #0086c3;
+  border-radius: 5px;
+  width: 750px;
+  padding: 10px 0px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  letter-spacing: 0.15px;
+
+  color: #ffffff;
+
+  color: #ffffff;
+  cursor: pointer;
+`;
+
+export const Input = styled.div`
+  width: 100%;
+  text-align: left;
+  margin: 10px 0px;
+  label {
+    margin-top: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #3d3d3d;
+    margin-bottom: 10px;
+  }
+
+  input {
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.17);
+    border-radius: 0px;
+    padding: 9px 13px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    border: 1px solid #e5e5e5;
+    color: #3d3d3d;
+    background-color: #fff;
+    height: 40px;
+    margin: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    :hover,
+    :focus {
+      background: #cccccc;
+    }
+  }
+
+  textarea {
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.17);
+    width: 100%;
+    border-radius: 0px;
+    padding: 9px 13px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    border: 0px solid #000000;
+    color: #3d3d3d;
+    background-color: #fff;
+    margin: 0px 10px 0px 0px;
+    resize: none;
+    box-sizing: border-box;
+    :hover,
+    :focus {
+      background: #cccccc;
+    }
+    ::placeholder {
+      color: #3d3d3d;
+      opacity: 0.9;
+    }
+  }
+`;
+
+export const Select = styled.div`
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin: 10px 0px;
+  padding: 0px;
+  outline: none;
+  text-align: left;
+
+  label {
+    margin-top: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #3d3d3d;
+    margin-bottom: 10px;
+  }
+
+  select {
+    width: 100%;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.17);
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    padding: 9px 13px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    outline: 0;
+    border: 0px solid #e5e5e5;
+    color: #3d3d3d;
+    height: 40px;
+    background-color: #fff;
+
+    :hover,
+    :focus {
+      color: #000000;
+      background: #cccccc;
+      .select_arrow {
+        border-top-color: #000000;
+      }
+    }
+
+    :disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  .select_arrow {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 8px 5px 0px 5px;
+    border-color: #7b7b7b transparent transparent transparent;
+  }
+
+  :hover,
+  :focus {
+    .select_arrow {
+      border-top-color: #000000;
+    }
+  }
+`;
+
+export const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  ${Select}:first-child {
+    margin-right: 10px;
+    margin-left: 0px;
+  }
+
+  ${Select} {
+    margin: 10px;
+  }
+
+  ${Input}:first-child {
+    margin-right: 0px;
+    margin-right: 10px;
+  }
+
+  ${Input}:last-child {
+    margin-left: 10px;
+  }
 `;

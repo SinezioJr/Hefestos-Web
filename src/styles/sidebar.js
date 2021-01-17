@@ -8,6 +8,8 @@ import Cog from "../assets/icons/cog";
 import Power from "../assets/icons/power";
 import Desklamp from "../assets/icons/desklamp";
 
+import { Link } from "react-router-dom";
+
 const VerticalBar = styled.div`
   position: fixed;
   width: ${(props) => (props.active ? "250px" : "50px")};
@@ -16,7 +18,7 @@ const VerticalBar = styled.div`
   left: 0px;
   top: 0px;
   padding: 0px 0px;
-  background: #fff;
+  background: #f6f6f6;
   transition: 0.125s;
   overflow-x: hidden;
   border-width: 0px 1px 0px 0px;
@@ -151,20 +153,26 @@ export default function SideBar(props) {
 
         <div className="menu">
           <div className="align-end">
-            <div className="item">
-              <Desklamp className="icon" />
-              <div className="headline">Cursos</div>
-            </div>
+            <Link to="/course">
+              <div className="item">
+                <Desklamp className="icon" />
+                <div className="headline">Cursos</div>
+              </div>
+            </Link>
 
-            <div className="item">
-              <Vacancies className="icon" />
-              <div className="headline">Vagas</div>
-            </div>
+            <Link to="/jobs">
+              <div className="item">
+                <Vacancies className="icon" />
+                <div className="headline">Vagas</div>
+              </div>
+            </Link>
 
-            <div className="item">
-              <Person className="icon" />
-              <div className="headline">Perfil</div>
-            </div>
+            <Link to="/perfil">
+              <div className="item">
+                <Person className="icon" />
+                <div className="headline">Perfil</div>
+              </div>
+            </Link>
           </div>
 
           <div className="item">

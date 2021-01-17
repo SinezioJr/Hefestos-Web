@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import login from "./login";
+import courses from "./Courses";
 import jobs from "./jobs";
 
 export default function RouterView() {
@@ -10,6 +11,7 @@ export default function RouterView() {
       <Switch>
         <Route path="/" exact component={login} />
         <Route path="/jobs" component={jobs} />
+        <Route path="/courses" component={courses} />
       </Switch>
     </BrowserRouter>
   );
