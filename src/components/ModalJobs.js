@@ -16,7 +16,7 @@ export default (props) => {
       <Modal {...props}>
         <form onSubmit={handleSubmit(onSubmit)}>
           <Input>
-            <label htmlFor="titulodaVaga">Título da Curso</label>
+            <label htmlFor="titulodaVaga">Título da Vaga</label>
             <input
               type="text"
               name="titulodaVaga"
@@ -34,6 +34,21 @@ export default (props) => {
                 </option>
                 <option value="Tecnologia">Tecnologia</option>
                 <option value="Manutencao">Manutenção</option>
+              </select>
+              <div className="select_arrow" />
+            </Select>
+
+            <Select>
+              <label htmlFor="Tipo">Tipo</label>
+
+              <select value={""} name="Tipo" ref={register({ required: true })}>
+                <option value="" style={{ display: "none" }}>
+                  Selecione
+                </option>
+                <option value="Emprego">Emprego</option>
+                <option value="Estagio">Estágio</option>
+                <option value="Estagio">Temporario</option>
+                <option value="Estagio">Bico</option>
               </select>
               <div className="select_arrow" />
             </Select>
@@ -74,18 +89,8 @@ export default (props) => {
                 ref={register({ required: true })}
               />
             </Input>
-
             <Input>
-              <label htmlFor="Horario">Horário de Início</label>
-              <input
-                type="time"
-                name="titulodaVaga"
-                ref={register({ required: true })}
-              />
-            </Input>
-
-            <Input>
-              <label htmlFor="Horario">Horário de Término</label>
+              <label htmlFor="Horario">Horário</label>
               <input
                 type="time"
                 name="titulodaVaga"
@@ -94,14 +99,14 @@ export default (props) => {
             </Input>
           </Row>
           <Input>
-            <label htmlFor="Descricao">Inscrição</label>
+            <label htmlFor="Descricao">Descrição</label>
             <textarea
               rows={5}
               name="Descricao"
               ref={register({ required: true })}
             />
           </Input>
-          <LongButton>CADASTRAR CURSO</LongButton>
+          <LongButton>CADASTRAR VAGA</LongButton>
         </form>
       </Modal>
     </>

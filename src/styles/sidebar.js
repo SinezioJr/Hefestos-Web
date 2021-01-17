@@ -132,6 +132,8 @@ const VerticalBar = styled.div`
       letter-spacing: 0.3px;
 
       color: #000000;
+
+      text-decoration: none;
     }
   }
 `;
@@ -153,21 +155,21 @@ export default function SideBar(props) {
 
         <div className="menu">
           <div className="align-end">
-            <Link to="/course">
+            <Link to="/courses" style={{ textDecoration: "none" }}>
               <div className="item">
                 <Desklamp className="icon" />
                 <div className="headline">Cursos</div>
               </div>
             </Link>
 
-            <Link to="/jobs">
+            <Link to="/jobs" style={{ textDecoration: "none" }}>
               <div className="item">
                 <Vacancies className="icon" />
                 <div className="headline">Vagas</div>
               </div>
             </Link>
 
-            <Link to="/perfil">
+            <Link to="/perfil" style={{ textDecoration: "none" }}>
               <div className="item">
                 <Person className="icon" />
                 <div className="headline">Perfil</div>
@@ -180,10 +182,12 @@ export default function SideBar(props) {
             <div className="headline">Configurações</div>
           </div>
 
-          <div className="item active">
-            <Power className="icon" />
-            <div className="headline">Sair</div>
-          </div>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <div className="item active">
+              <Power className="icon" />
+              <div className="headline">Sair</div>
+            </div>
+          </Link>
         </div>
       </VerticalBar>
     </div>
