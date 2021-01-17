@@ -26,7 +26,7 @@ export default function App(props) {
       <GlobalStyle />
       <SideBar active={barActive} />
       <AppFrame active={barActive}>
-        <HeaderBar changeBarActive={changeBarActive} />
+        <HeaderBar changeBarActive={changeBarActive} title={props.barTitle} />
         {props.children}
       </AppFrame>
     </>

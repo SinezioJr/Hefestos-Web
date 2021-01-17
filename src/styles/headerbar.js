@@ -56,7 +56,7 @@ function App(props) {
           className="menu"
           onClick={props.changeBarActive}
         />
-        <div className="title">CURSOS</div>
+        <div className="title">{props.title}</div>
         <NotificationZone className="notification">
           <Notification width="25" height="25" />
         </NotificationZone>

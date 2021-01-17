@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <Frame>
+      <Frame barTitle="Cursos">
         <Container>
           <CardCourse />
           <CardCourse />
