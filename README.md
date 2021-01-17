@@ -55,6 +55,6 @@ As seguintes ferramentas foram usadas na construção do projeto
 
 - [Node](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
-- [JavaScript](https://www.javascript.com/)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [HTML](https://html.com/)
 - [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
