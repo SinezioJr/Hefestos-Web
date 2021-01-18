@@ -2,7 +2,7 @@ import { useState } from "react";
 import Frame from "../components/Frame";
 
 import { Container, FloatButton } from "../styles/forms";
-import { CardCourse } from "../components/cards";
+import { CardCourse, Tooltip } from "../components/cards";
 
 import Add from "../assets/icons/sum";
 import AddCourseModal from "../components/ModalCourse";
@@ -25,7 +25,9 @@ function App() {
           <CardCourse />
         </Container>
         <FloatButton onClick={showManualCourse}>
-          <Add />
+          <Tooltip msg="Adicionar Curso">
+            <Add />
+          </Tooltip>
         </FloatButton>
       </Frame>
       <AddCourseModal show={addCourse} handleClose={closeManualCourse} />

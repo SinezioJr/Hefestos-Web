@@ -192,3 +192,39 @@ export const JobsCard = styled.div`
     }
   }
 `;
+
+export const Tooltips = styled.div`
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+
+  .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    bottom: 50px;
+    left: -10%;
+    margin-left: -95px;
+
+    position: absolute;
+    z-index: 1;
+  }
+  .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 90%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+  :hover .tooltiptext {
+    visibility: visible;
+  }
+`;

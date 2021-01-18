@@ -169,7 +169,7 @@ export default function SideBar(props) {
               </div>
             </Link>
 
-            <Link to="/perfil" style={{ textDecoration: "none" }}>
+            <Link to="/profile" style={{ textDecoration: "none" }}>
               <div className="item">
                 <Person className="icon" />
                 <div className="headline">Perfil</div>

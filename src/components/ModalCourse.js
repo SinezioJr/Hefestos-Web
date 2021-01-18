@@ -22,11 +22,15 @@ const Title = styled.div`
 `;
 
 export default function App(props) {
-  const { register, handleSubmit } = useForm({
+  const { register, handleSubmit, errors, reset } = useForm({
     defaultValues: { tipo: "" },
   });
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    reset();
+    props.handleClose();
+  };
 
   return (
     <>
@@ -38,6 +42,7 @@ export default function App(props) {
             <input
               type="text"
               name="titulodaVaga"
+              style={{ border: errors.titulodaVaga ? "1px solid red" : "" }}
               ref={register({ required: true })}
             />
           </Input>
@@ -46,7 +51,12 @@ export default function App(props) {
             <Select>
               <label htmlFor="area">Área</label>
 
-              <select value={""} name="area" ref={register({ required: true })}>
+              <select
+                defaultValue={""}
+                name="area"
+                ref={register({ required: true })}
+                style={{ border: errors.area ? "1px solid red" : "" }}
+              >
                 <option value="" style={{ display: "none" }}>
                   Selecione
                 </option>
@@ -61,6 +71,7 @@ export default function App(props) {
               <input
                 type="text"
                 name="Valor"
+                style={{ border: errors.Valor ? "1px solid red" : "" }}
                 ref={register({ required: true })}
               />
             </Input>
@@ -71,6 +82,7 @@ export default function App(props) {
             <input
               type="text"
               name="Local"
+              style={{ border: errors.Local ? "1px solid red" : "" }}
               ref={register({ required: true })}
             />
           </Input>
@@ -81,6 +93,7 @@ export default function App(props) {
               <input
                 type="date"
                 name="DataInício"
+                style={{ border: errors.DataInício ? "1px solid red" : "" }}
                 ref={register({ required: true })}
               />
             </Input>
@@ -88,25 +101,28 @@ export default function App(props) {
               <label htmlFor="DataTermino">Data de Término</label>
               <input
                 type="date"
+                style={{ border: errors.DataTermino ? "1px solid red" : "" }}
                 name="DataTermino"
                 ref={register({ required: true })}
               />
             </Input>
 
             <Input>
-              <label htmlFor="Horario">Horário de Início</label>
+              <label htmlFor="HorarioInicio">Horário de Início</label>
               <input
                 type="time"
-                name="titulodaVaga"
+                style={{ border: errors.HorarioInicio ? "1px solid red" : "" }}
+                name="HorarioInicio"
                 ref={register({ required: true })}
               />
             </Input>
 
             <Input>
-              <label htmlFor="Horario">Horário de Término</label>
+              <label htmlFor="HorarioTermino">Horário de Término</label>
               <input
                 type="time"
-                name="titulodaVaga"
+                style={{ border: errors.HorarioTermino ? "1px solid red" : "" }}
+                name="HorarioTermino"
                 ref={register({ required: true })}
               />
             </Input>
@@ -115,6 +131,7 @@ export default function App(props) {
             <label htmlFor="Descricao">Informações de Inscrição</label>
             <textarea
               rows={5}
+              style={{ border: errors.Descricao ? "1px solid red" : "" }}
               name="Descricao"
               ref={register({ required: true })}
             />

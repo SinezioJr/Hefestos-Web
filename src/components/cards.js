@@ -1,4 +1,4 @@
-import { CourseCard, JobsCard } from "../styles/card";
+import { CourseCard, JobsCard, Tooltips } from "../styles/card";
 import { ButtonCard } from "../styles/forms";
 
 export const CardCourse = () => (
@@ -11,7 +11,7 @@ export const CardCourse = () => (
     </div>
 
     <div className="informations">
-      <div className="title">Curso de operador de caixa</div>
+      <div className="title">Curso de Operador de Caixa</div>
       <div className="local">
         Rua Landoufo Alves, 26, Santo Antonio de Jesus - BA
       </div>
@@ -46,4 +46,11 @@ export const CardJobs = () => (
       </div>
     </div>
   </JobsCard>
+);
+
+export const Tooltip = (props) => (
+  <Tooltips>
+    {props.children}
+    <span class="tooltiptext"> {props.msg}</span>
+  </Tooltips>
 );
