@@ -51,6 +51,9 @@ Sumário
   
   #### Execute a aplicação
   $ yarn start
+  
+  ### Passando do Login
+  Para passar da tela de login para a tela principal basta colocar uma sequência aleatória de números de 11 dígitos e uma senha qualquer.
 
 ## Tecnologias
 
